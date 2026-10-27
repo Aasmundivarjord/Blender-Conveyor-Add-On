@@ -1,0 +1,46 @@
+schema_version = "1.0.0"
+
+id = "conveyor_system"
+version = "2.26.4"
+name = "Path-Driven Conveyor System"
+tagline = "Design catalog-accurate warehouse conveyors along drawn 3D paths"
+maintainer = "Åsmund Ivarjord"
+type = "add-on"
+
+tags = ["Geometry Nodes", "Modeling", "Animation", "Object"]
+
+# Built and tested on Blender 5.2 LTS and 5.3: the node libraries
+# (geonodes/library) ship one per series, the Curves-object spine needs 5.x.
+blender_version_min = "5.2.0"
+
+# No [permissions] table: the add-on reads only its own bundled presets and
+# node libraries; it writes no files and uses no network, clipboard, camera
+# or microphone.
+
+license = [
+  "SPDX:GPL-3.0-or-later",
+]
+copyright = [
+  "2026 Åsmund Ivarjord",
+]
+
+[build]
+# Only the add-on itself goes into the distributable zip: no test scenes,
+# no git history, no development notes or tests.
+paths_exclude_pattern = [
+  "__pycache__/",
+  "/.git/",
+  "/.gitignore",
+  "/*.blend",
+  "/*.blend1",
+  "/*.blend2",
+  "/blender_conveyor_extension_prompt*.md",
+  "/docs/",
+  "/tests/",
+  "/previews/",
+  "/publishing/",
+  "/.github/",
+  "/tools/",
+  "/dist/",
+  "/.DS_Store",
+]

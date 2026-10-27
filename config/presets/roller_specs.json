@@ -1,0 +1,36 @@
+{
+  "note": "Most widely-documented roller figures (CEMA/ISO) come from bulk-material handling and do NOT transfer to unit/tote/carton handling -- these duty classes are unit-handling specific, each sourced from a real catalog rather than a bulk-conveyor chart.",
+  "duty_classes": {
+    "light": {
+      "diameter_mm": 25.0,
+      "pitch_mm": 28.0,
+      "source": "Interroll Floway Roller Track datasheet (PI_6_05_RollerFlow_GB_2012.pdf)",
+      "verified": true,
+      "note": "Small/light carton roller track, tight pitch."
+    },
+    "standard": {
+      "diameter_mm": 48.3,
+      "pitch_mm": 76.2,
+      "source": "Hytrol 1.9in gravity roller conveyor -- the de facto NA industry-standard bed for cartons/totes, 5-75 lb duty",
+      "verified": true,
+      "note": "Most common gravity/idle roller bed for cartons and totes."
+    },
+    "mdr": {
+      "diameter_mm": 50.0,
+      "pitch_mm": 76.2,
+      "source": "Interroll RollerDrive EC5000 datasheet (50mm cylindrical, IP54); idle/slave roller pitch assumed to match standard duty class",
+      "verified": true,
+      "note": "24V motor-driven-roller zone: one drive roller + 2-4 idle/slave rollers per zone, linked by O-ring bands."
+    }
+  },
+  "min_rollers_under_item_rule_of_thumb": {
+    "value": 3,
+    "verified": false,
+    "note": "Widely cited industry rule of thumb (at least 3 rollers under the smallest item at all times). NOT confirmed against a specific manufacturer catalog page during this research pass -- treat as a design heuristic to drive default pitch selection, not as a sourced spec."
+  },
+  "belt_pulley_diameter_estimate": {
+    "diameter_mm": 80.0,
+    "verified": false,
+    "note": "Interpolated estimate for tote/carton-scale belt conveyors. Manufacturer data found only at bench-conveyor scale (25-32mm, e.g. MISUMI flat belt conveyors) and CEMA bulk scale (200mm+, ANSI/CEMA 402) -- this tool's scale sits in the documented gap between the two. Revisit if a real unit-handling belt catalog turns up a direct figure."
+  }
+}

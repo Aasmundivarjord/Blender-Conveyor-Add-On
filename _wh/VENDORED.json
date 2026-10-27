@@ -1,0 +1,20 @@
+{
+ "contract": "2.1",
+ "files": {
+  "__init__.py": "d0c9393d5c5e5c0e76c3592ffd7f6a58c3e7c86f2909b717fe9b30d297522a65",
+  "contrast.py": "9bfab6946de8932ed75a0f70e6b82f5c7724f04dc0368a35e49d3d4806526b93",
+  "frames.py": "5c4ac4b6c000d4952a11266a90cea96c7f5677657c9db6ea49bbc14b348147c7",
+  "geometry.py": "195e24e9fa812133f773c1c5bbb9dce945fd48c2ea2791c1e9aad416c6267a7e",
+  "levels.py": "964d4901640caabf0e111cfac3ae50dcf72e654e603308b971ba6131f96a6963",
+  "loads.py": "c791424394335e98d4502f533f1ca949a2e1655df9042fe02201291d1d57430c",
+  "longload.py": "eab63065730cc6e0e68da3d19728dface352485fe528cebb4e26786890f9f9f8",
+  "ops.py": "c59f0ec6e44886d209f0ee436b53bc4dd7dd80888573805f24baa29fbdf6b893",
+  "palette.py": "82e40861ec36ee1b227eebc302506163dfadbd42d07517c1922f1f9f28b6e3d6",
+  "ports.py": "560ba9ff095ff77426733b3ce5470454de84a0a63b7aa9a73c1831e9874ab5c9",
+  "records.py": "fdc61c4ae6e7f2087731470ea22b10548107d2b208e7d225bda287c1d61ca354",
+  "selfcheck.py": "6da1061fc07ffbab0e3a9254aaeb8427c49a4b03ace136b14249dd4bf90db424",
+  "simple_flow.py": "1369f708bfbc7408f8cd5c8d031be034ca77e88871488670cc2599120cbf7287"
+ },
+ "source": "warehouse_common",
+ "version": "0.6.9"
+}

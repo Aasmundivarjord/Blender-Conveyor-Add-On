@@ -1,0 +1,31 @@
+{
+  "source": "https://www.drycargomag.com/belt-conveyor-widths-%E2%80%93-cema-and-iso-standards ; ANSI/CEMA 402 (https://cemanet.org/wp-content/uploads/2019/06/ANSI-CEMA-402-REVIEW-2019.pdf)",
+  "note": "These are documented bulk-handling belt-width standards, reused here as the reference width dropdown for all conveyor types (belt, roller, MDR, chain) since no separate unit-handling width standard is publicly documented. Roller/chain frame widths in practice are usually chosen to match one of these anyway.",
+  "groups": {
+    "iso_metric": {
+      "system": "ISO",
+      "widths": [
+        { "id": "iso_400", "label": "400 mm", "width_mm": 400.0 },
+        { "id": "iso_500", "label": "500 mm", "width_mm": 500.0 },
+        { "id": "iso_650", "label": "650 mm", "width_mm": 650.0 },
+        { "id": "iso_800", "label": "800 mm", "width_mm": 800.0 },
+        { "id": "iso_1000", "label": "1000 mm", "width_mm": 1000.0 },
+        { "id": "iso_1200", "label": "1200 mm", "width_mm": 1200.0 },
+        { "id": "iso_1600", "label": "1600 mm", "width_mm": 1600.0 }
+      ]
+    },
+    "cema_imperial": {
+      "system": "CEMA",
+      "widths": [
+        { "id": "cema_18", "label": "18\" (457 mm)", "width_mm": 457.2 },
+        { "id": "cema_24", "label": "24\" (610 mm)", "width_mm": 609.6 },
+        { "id": "cema_30", "label": "30\" (762 mm)", "width_mm": 762.0 },
+        { "id": "cema_36", "label": "36\" (914 mm)", "width_mm": 914.4 },
+        { "id": "cema_42", "label": "42\" (1067 mm)", "width_mm": 1066.8 },
+        { "id": "cema_48", "label": "48\" (1219 mm)", "width_mm": 1219.2 },
+        { "id": "cema_60", "label": "60\" (1524 mm)", "width_mm": 1524.0 },
+        { "id": "cema_72", "label": "72\" (1829 mm)", "width_mm": 1828.8 }
+      ]
+    }
+  }
+}

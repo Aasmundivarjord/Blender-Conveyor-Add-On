@@ -1,0 +1,157 @@
+{
+  "note": "Catalog-ish segment data from a targeted research pass (2026-09). Values are typical of Hytrol / Interroll / Monk / BestConnect catalog pages but have NOT each been confirmed against a specific catalog page -- treat as 'catalog-ish' until verified. Edit here, never in code.",
+  "sources": [
+    "Hytrol tapered roller gravity curves (condrives.com) -- 30/45/60/90 deg",
+    "packagingconveyor.com gravity guide -- 24in-48in inside radii",
+    "Interroll SH1210 curve",
+    "Hytrol 199-CRRC live roller curve (cisco-eagle.com)",
+    "packagingconveyor.com + Remcon incline guides -- nose-over, angle rules of thumb",
+    "Monk roller conveyor technical spec PDF -- 600-3000 mm straights in 150 mm steps",
+    "BestConnect 10 ft section (cisco-eagle.com)"
+  ],
+  "straight": {
+    "min_mm": 600.0,
+    "max_mm": 6000.0,
+    "increment_mm": 150.0,
+    "default_mm": 3000.0,
+    "verified": false
+  },
+  "curve": {
+    "angles_deg": [
+      30,
+      45,
+      60,
+      90,
+      180
+    ],
+    "default_angle_deg": 90,
+    "inside_radii": [
+      {
+        "id": "r600",
+        "label": "600 mm",
+        "radius_mm": 600.0,
+        "system": "metric"
+      },
+      {
+        "id": "r610",
+        "label": "24\" (610 mm)",
+        "radius_mm": 609.6,
+        "system": "imperial"
+      },
+      {
+        "id": "r762",
+        "label": "30\" (762 mm)",
+        "radius_mm": 762.0,
+        "system": "imperial"
+      },
+      {
+        "id": "r800",
+        "label": "800 mm",
+        "radius_mm": 800.0,
+        "system": "metric"
+      },
+      {
+        "id": "r914",
+        "label": "36\" (914 mm)",
+        "radius_mm": 914.4,
+        "system": "imperial"
+      },
+      {
+        "id": "r1000",
+        "label": "1000 mm",
+        "radius_mm": 1000.0,
+        "system": "metric"
+      },
+      {
+        "id": "r1200",
+        "label": "1200 mm",
+        "radius_mm": 1200.0,
+        "system": "metric"
+      },
+      {
+        "id": "r1219",
+        "label": "48\" (1219 mm)",
+        "radius_mm": 1219.2,
+        "system": "imperial"
+      }
+    ],
+    "default_radius_id": "r800",
+    "note": "Catalogs quote INSIDE radius; centerline radius = inside + width/2. Gravity curves use tapered rollers (not modeled).",
+    "verified": false
+  },
+  "incline": {
+    "angles_deg": [
+      5,
+      10,
+      15,
+      20,
+      25,
+      30,
+      45
+    ],
+    "default_angle_deg": 15,
+    "default_length_mm": 3000.0,
+    "nose_over_radius_mm": {
+      "default": 1500.0,
+      "belt": 2000.0,
+      "roller": 1500.0,
+      "chain": 1500.0,
+      "omni": 1500.0
+    },
+    "rules_of_thumb": {
+      "cartons_max_deg": 18,
+      "plastic_totes_max_deg": 15,
+      "smooth_belt_max_deg": 20,
+      "rough_top_belt_max_deg": 30,
+      "cleated_belt_min_deg": 45,
+      "note": "Plain belt up to ~18-20 deg, totes <= 15 deg; test the worst SKU."
+    },
+    "note": "Flat<->incline transitions use a nose-over (single up to ~15 deg, double for ~30 deg). Modeled as a vertical arc of nose_over_radius, inserted as extra length between the two segments rather than carved out of them.",
+    "verified": false
+  },
+  "modules": {
+    "RAT": {
+      "label": "Right-Angle Transfer",
+      "length_mm": 900.0,
+      "allows_exit": true,
+      "note": "Powered transfer head; product moves sideways without turning."
+    },
+    "MERGE": {
+      "label": "Merge Junction",
+      "length_mm": 1200.0,
+      "allows_exit": false,
+      "note": "Auto-inserted where one line's end meets another line's body."
+    },
+    "DIVERTER": {
+      "label": "Diverter / Sorter",
+      "length_mm": 1500.0,
+      "allows_exit": false,
+      "note": "Outbound twin of a merge: goods leave the main line onto a docked branch."
+    },
+    "BUFFER": {
+      "label": "Buffer / Accumulation",
+      "length_mm": 3000.0,
+      "allows_exit": false,
+      "note": "Accumulation zone: goods queue up against its end (zero-pressure buffer for a picker or a downstream stop)."
+    },
+    "LIFT": {
+      "label": "Vertical conveyor (S / C)",
+      "length_mm": 1200.0,
+      "allows_exit": false,
+      "note": "Continuous vertical conveyor (S- / C-conveyor): the goods stay level on forks while the column carries them up. S carries on in the same direction (through a mezzanine), C comes back out above the entry."
+    },
+    "ARB": {
+      "label": "Angled-roller align / turn",
+      "length_mm": 1500.0,
+      "allows_exit": false,
+      "note": "Angled-roller belt element: centres / aligns goods, or turns them 90 deg in motion (or a cheap fixed pivot for the turn)."
+    },
+    "WRAPPER": {
+      "label": "Pallet wrapper",
+      "length_mm": 2700.0,
+      "allows_exit": false,
+      "note": "Conveyorised turntable stretch wrapper: the pallet rides onto the turntable, is wrapped (or unwrapped) and conveyed on. Scaled to the line's width."
+    }
+  },
+  "junction_snap_tolerance_mm": 150.0
+}

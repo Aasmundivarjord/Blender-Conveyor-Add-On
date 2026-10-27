@@ -1,0 +1,150 @@
+{
+  "source": "Typical practical rates per technology (rules of thumb, units per hour). Edit here, never in code.",
+  "junction_technologies": {
+    "SKEW": {
+      "label": "Angled roller merge",
+      "angles": [
+        15,
+        30,
+        45,
+        60,
+        75
+      ],
+      "roles": [
+        "MERGE"
+      ],
+      "rate_per_h": null,
+      "note": "Side line joins at 30-45 deg over slightly skewed rollers: no lift, no cycle stop, fewer drives, product keeps moving. Items leave rotated or off-centre: align right after (side guides, skewed rollers, centring)"
+    },
+    "POPUP": {
+      "label": "Pop-up wheel transfer",
+      "angles": [
+        15,
+        30,
+        45,
+        60,
+        75,
+        90
+      ],
+      "roles": [
+        "MERGE",
+        "DIVERTER"
+      ],
+      "rate_per_h": 1500,
+      "note": "Rows of small powered wheels between the rollers pop up and steer the load out (90 deg transfer, or 15-75 deg divert/merge). 25-40 cycles/min: ~1,500-2,400/h, usually the bottleneck"
+    },
+    "STRIP": {
+      "label": "High-performance divert (HPD)",
+      "angles": [
+        15,
+        30,
+        45,
+        60,
+        75,
+        90
+      ],
+      "roles": [
+        "MERGE",
+        "DIVERTER"
+      ],
+      "rate_per_h": 4000,
+      "note": "Cassettes of small swivelling rollers (or strip belts / pivoting wheels) in the main bed steer units out of the moving mainline at 30-45 deg (reversed: dynamic merge). Lives and dies with gap control; keep both lanes clear downstream"
+    },
+    "ARB": {
+      "label": "Angled-roller belt",
+      "angles": [
+        15,
+        30,
+        45,
+        60,
+        75,
+        90
+      ],
+      "roles": [
+        "MERGE",
+        "DIVERTER"
+      ],
+      "rate_per_h": 5000,
+      "note": "Angled rollers in the belt, activated from below: divert / merge at full line speed, contactless. Very expensive; controls know-how; belt modules are wear items"
+    },
+    "PUSHER": {
+      "label": "Pusher divert",
+      "angles": [
+        90
+      ],
+      "roles": [
+        "DIVERTER"
+      ],
+      "rate_per_h": 1200,
+      "note": "Pushes the unit off the line at 90 deg into a reject lane or rarely used exit. Cheap and compact, but loud and hard on the load: sturdy items only, needs a clear gap"
+    },
+    "BELT": {
+      "label": "Pop-up belt transfer (RAT)",
+      "angles": [
+        90
+      ],
+      "roles": [
+        "MERGE",
+        "DIVERTER"
+      ],
+      "rate_per_h": 1500,
+      "note": "Belt strips rise between the rollers, lift the unit and carry it off at 90 deg without turning it: the workhorse for totes and cartons. 25-40 cycles/min (~1,500-2,400/h): almost always the bottleneck, size it before the straight runs. The divert lane must be as wide as the unit is long",
+      "verified": false
+    },
+    "CHAIN": {
+      "label": "Pop-up chain transfer",
+      "angles": [
+        90
+      ],
+      "roles": [
+        "MERGE",
+        "DIVERTER"
+      ],
+      "rate_per_h": 400,
+      "note": "Two or three chain strands between the rollers lift the load and move it sideways: heavy loads and pallets, slow",
+      "verified": false
+    }
+  },
+  "inline_modules": {
+    "ARB": {
+      "label": "Angled-roller element",
+      "rate_per_h": 5000,
+      "note": "Centre / align or turn 90 deg in motion, contactless"
+    },
+    "PIVOT": {
+      "label": "Fixed-pivot turn",
+      "rate_per_h": null,
+      "note": "A pin at the line edge turns a rigid load 90 deg in motion; each pivot suits a limited size window"
+    },
+    "SPIRAL": {
+      "label": "Spiral conveyor",
+      "rate_per_h": 2000,
+      "note": "Continuous vertical transport at high rate on a small footprint; one in, one out; 0.5-1.0 m/s"
+    },
+    "LIFT": {
+      "label": "S- / C-conveyor (continuous vertical)",
+      "rate_per_h": 1400,
+      "note": "Continuous vertical conveyor, one item per platform, ~2 x 2 m footprint; S: out on the opposite side (through a mezzanine), C: in and out on the same side. 1,000-1,400/h"
+    },
+    "RAT": {
+      "label": "90 deg pop-up belt transfer",
+      "rate_per_h": 1500,
+      "note": "Belt strips lift the unit and carry it off at 90 deg; 25-40 cycles/min, usually the bottleneck"
+    },
+    "BUFFER": {
+      "label": "ZPA accumulation",
+      "rate_per_h": 2400,
+      "note": "Zero-pressure accumulation: one motor roller and one photo-eye per zone"
+    },
+    "CURVE": {
+      "label": "Powered roller curve",
+      "rate_per_h": null,
+      "note": "Tapered rollers, inner radius 600-800 mm; a belt curve above ~1.5 m/s or for exact orientation"
+    },
+    "WRAPPER": {
+      "label": "Pallet wrapper",
+      "rate_per_h": 45,
+      "note": "Conveyorised turntable stretch wrapper: 40-45 loads/h (Handle It FA-4000, Lantech Q Automatic), up to 16 rpm, wrap height 2.2-2.3 m"
+    }
+  }
+}

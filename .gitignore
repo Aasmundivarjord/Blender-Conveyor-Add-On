@@ -1,0 +1,15 @@
+__pycache__/
+*.pyc
+*.blend1
+*.blend2
+.DS_Store
+dist/
+*.blend
+*.blend1
+
+# scratch output of tests/gui/screenshots.py
+previews/_*
+!geonodes/library/*.blend
+
+# Local screenshots of the development history (not published)
+/previews/

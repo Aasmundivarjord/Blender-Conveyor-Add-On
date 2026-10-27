@@ -1,0 +1,148 @@
+{
+  "note": "Labels, typical speeds and practical rates per type are rules of thumb; min_bend_radius_mm values are placeholder engineering estimates.",
+  "types": [
+    {
+      "id": "gravity_roller",
+      "label": "Roller (MDR)",
+      "category": "transportation",
+      "cross_section": "roller",
+      "default_duty_class": "standard",
+      "width_groups": [
+        "iso_metric",
+        "cema_imperial"
+      ],
+      "supports_continuous_curve": true,
+      "min_bend_radius_mm": 1500.0,
+      "angle_snap_deg": null,
+      "notes": "Motor-driven rollers (24 V motor roller per zone, run on demand): totes, bins and cartons with firm flat bottoms; accumulation (ZPA) and buffering. The smallest item must sit on at least 3 rollers. ~2,400 units/h per line.",
+      "speed_m_s": [
+        0.3,
+        1.0
+      ],
+      "rate_per_h": 2400
+    },
+    {
+      "id": "belt",
+      "label": "Belt",
+      "category": "transportation",
+      "cross_section": "belt",
+      "default_duty_class": null,
+      "width_groups": [
+        "iso_metric",
+        "cema_imperial"
+      ],
+      "supports_continuous_curve": true,
+      "min_bend_radius_mm": 1000.0,
+      "angle_snap_deg": null,
+      "notes": "Full surface support: polybags, apparel, small and fragile items, long runs, inclines and declines. Transport only: a plain belt cannot accumulate. 3,000+ units/h.",
+      "speed_m_s": [
+        0.5,
+        2.0
+      ],
+      "rate_per_h": 3000
+    },
+    {
+      "id": "chain",
+      "label": "Modular plastic belt",
+      "category": "transportation",
+      "cross_section": "chain",
+      "default_duty_class": null,
+      "width_groups": [
+        "iso_metric",
+        "cema_imperial"
+      ],
+      "supports_continuous_curve": true,
+      "min_bend_radius_mm": 1200.0,
+      "angle_snap_deg": null,
+      "notes": "Link-plate / modular-tab belt surface on sprockets: wet or heavy duty, tight curves.",
+      "speed_m_s": [
+        0.5,
+        1.5
+      ],
+      "rate_per_h": 3000
+    },
+    {
+      "id": "omni",
+      "hidden": true,
+      "label": "Omni-wheel sorter deck",
+      "category": "transportation",
+      "cross_section": "omni",
+      "default_duty_class": null,
+      "width_groups": [
+        "iso_metric",
+        "cema_imperial"
+      ],
+      "supports_continuous_curve": true,
+      "min_bend_radius_mm": 1200.0,
+      "angle_snap_deg": null,
+      "notes": "Deck of powered omni wheels: goods can be steered in any direction (its merges, diverters and transfers get the wheel deck too).",
+      "speed_m_s": [
+        0.5,
+        2.0
+      ],
+      "rate_per_h": 5000
+    },
+    {
+      "id": "pouch_sorter",
+      "label": "Pouch sorter (overhead)",
+      "category": "sortation",
+      "cross_section": "pouch",
+      "default_duty_class": null,
+      "width_groups": [],
+      "supports_continuous_curve": true,
+      "min_bend_radius_mm": 1000.0,
+      "angle_snap_deg": null,
+      "notes": "Overhead rail with trolleys carrying hanging pouches (pocket sorter: Ferag Skyfall, Dürkopp, Knapp, TGW): one item per pouch, sorted by rail switches. The pouch is a standard 400 x 600 mm bag or a custom size, set per line.",
+      "speed_m_s": [
+        0.5,
+        1.5
+      ],
+      "rate_per_h": 6000
+    },
+    {
+      "id": "right_angle_transfer",
+      "label": "Right-Angle Transfer (RAT)",
+      "category": "transfer",
+      "cross_section": "module_rat",
+      "default_duty_class": null,
+      "width_groups": [
+        "iso_metric",
+        "cema_imperial"
+      ],
+      "supports_continuous_curve": false,
+      "min_bend_radius_mm": null,
+      "angle_snap_deg": 90.0,
+      "notes": "Discrete inserted module, not a bent path -- a powered transfer head lifts/diverts product 90 degrees."
+    },
+    {
+      "id": "merge_junction",
+      "label": "Merge / Transfer Junction",
+      "category": "transfer",
+      "cross_section": "module_merge",
+      "default_duty_class": null,
+      "width_groups": [
+        "iso_metric",
+        "cema_imperial"
+      ],
+      "supports_continuous_curve": false,
+      "min_bend_radius_mm": null,
+      "angle_snap_deg": null,
+      "notes": "Auto-generated when two paths' endpoints snap together; can be swapped for a different module type afterward."
+    },
+    {
+      "id": "diverter",
+      "label": "Diverter / Sorter",
+      "category": "sortation",
+      "cross_section": "module_diverter",
+      "default_duty_class": null,
+      "width_groups": [
+        "iso_metric",
+        "cema_imperial"
+      ],
+      "supports_continuous_curve": false,
+      "min_bend_radius_mm": null,
+      "angle_snap_deg": 45.0,
+      "notes": "Basic skewed-roller-style diverter module. Full sortation logic is out of scope for v1."
+    }
+  ]
+}

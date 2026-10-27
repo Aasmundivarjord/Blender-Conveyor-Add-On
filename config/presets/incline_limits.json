@@ -1,0 +1,41 @@
+{
+  "source": "https://www.remconequipment.com/guide-conveyor-incline-angle",
+  "limits": [
+    {
+      "conveyor_type": "belt_smooth",
+      "max_angle_deg": 18.0,
+      "note": "Smooth belt, dry, stable loads. Round/unstable loads need less.",
+      "verified": true
+    },
+    {
+      "conveyor_type": "belt_cleated",
+      "max_angle_deg": 30.0,
+      "note": "Cleated/chevron belt; usable roughly 25-35 deg depending on material.",
+      "verified": true
+    },
+    {
+      "conveyor_type": "gravity_roller",
+      "max_angle_deg": 0.0,
+      "note": "No self-conveying incline without cleats or a positive-drive attachment; treat as flat-to-slight-decline only.",
+      "verified": true
+    },
+    {
+      "conveyor_type": "powered_roller",
+      "max_angle_deg": 0.0,
+      "note": "Same limitation as gravity roller -- plain MDR cannot self-convey on a real incline.",
+      "verified": true
+    },
+    {
+      "conveyor_type": "chain",
+      "max_angle_deg": 0.0,
+      "note": "Plain chain/modular belt treated as flat-to-slight-decline only, same rationale as roller types.",
+      "verified": true
+    },
+    {
+      "conveyor_type": "omni",
+      "max_angle_deg": 0.0,
+      "note": "Omni wheel decks are flat sorters.",
+      "verified": false
+    }
+  ]
+}
